@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="podcastRecycler" type="id" />
+    <item name="bottomNavigation" type="id" />
+    <item name="profile_layout" type="id" />
+    <item name="profile_image" type="id" />
+    <item name="profile_name" type="id" />
+    <item name="profile_email" type="id" />
+    <item name="edit_profile_button" type="id" />
+    <item name="saveButton" type="id" />
+    <item name="commentBox" type="id" />
+</resources>

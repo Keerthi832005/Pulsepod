@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 🔵 Splash Screen Theme (AppCompat) -->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/title_bg</item>
+    </style>
+
+    <!-- 🟢 Custom Mood Button Style -->
+    <style name="MoodButtonStyle">
+        <item name="android:layout_width">160dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/rounded_mood_button</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- 🟣 Style for Circular Profile Image -->
+    <style name="RoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- Makes it circular -->
+    </style>
+
+</resources>

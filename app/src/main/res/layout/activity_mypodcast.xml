@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voiceRecorderLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D111C">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/backbutt"
+            android:contentDescription="Back" />
+
+        <!-- Page Title -->
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Voice Recorder"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Timer Section -->
+    <LinearLayout
+        android:id="@+id/timerSection"
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="60dp">
+
+        <TextView
+            android:id="@+id/timerDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#00E5FF"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/timerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recording..."
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp" />
+    </LinearLayout>
+
+    <!-- Waveform -->
+    <ImageView
+        android:id="@+id/waveform"
+        android:layout_below="@id/timerSection"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/voice"
+        android:scaleType="fitCenter" />
+
+    <!-- Control Buttons -->
+    <LinearLayout
+        android:id="@+id/controlButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="40dp">
+
+        <!-- Stop -->
+        <ImageButton
+            android:id="@+id/stopButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/stop_circle"
+            android:src="@drawable/ic_stop"
+            android:scaleType="centerInside"
+            android:contentDescription="Stop" />
+
+        <!-- Spacer -->
+        <Space
+            android:layout_width="40dp"
+            android:layout_height="wrap_content" />
+
+        <!-- Save -->
+        <ImageButton
+            android:id="@+id/saveButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/save2"
+            android:scaleType="centerInside"
+            android:contentDescription="Save" />
+    </LinearLayout>
+</RelativeLayout>

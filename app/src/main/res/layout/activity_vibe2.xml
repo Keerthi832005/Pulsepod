@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Background Mic Image -->
+    <ImageView
+        android:id="@+id/imgMic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/miclogo"
+        android:scaleType="centerCrop"
+        android:alpha="0.15" />
+
+    <!-- Top Right Logo -->
+
+    <!-- ✅ Top Left Back Button -->
+
+
+    <!-- Button Section -->
+
+
+    <ImageView
+        android:id="@+id/topLogo"
+        android:layout_width="23dp"
+        android:layout_height="27dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Back Button"
+        android:src="@drawable/back" />
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/rounded_sandal_transparent">
+
+        <!-- Mood Buttons -->
+        <Button
+            android:id="@+id/btnPhilo"
+            style="@style/MoodButtonStyle"
+            android:text="🧘 Philosophy" />
+
+        <Button
+            android:id="@+id/btnFiction"
+            style="@style/MoodButtonStyle"
+            android:text="📖 Fiction" />
+
+        <Button
+            android:id="@+id/btnLove"
+            style="@style/MoodButtonStyle"
+            android:text="❤️ Love" />
+
+        <Button
+            android:id="@+id/btnPopCulture"
+            style="@style/MoodButtonStyle"
+            android:text="📰 Pop Culture" />
+
+        <Button
+            android:id="@+id/btnSelfHelp"
+            style="@style/MoodButtonStyle"
+            android:text="🧠 Self-Help" />
+
+        <Button
+            android:id="@+id/btnMotivation"
+            style="@style/MoodButtonStyle"
+            android:text="🚀 Motivation" />
+
+        <Button
+            android:id="@+id/btnMusic"
+            style="@style/MoodButtonStyle"
+            android:text="🔬 Science" />
+    </LinearLayout>
+
+    <!-- Bottom Bar: Tune Tap Connect -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvSlogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Tune. Tap. Connect."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

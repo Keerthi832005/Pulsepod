@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/moodPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="16dp"
+    tools:ignore="ExtraText">
+
+    <!-- Header Text -->
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hey Buddy?\n..How do you Feel .."
+        android:textColor="#FFFF00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center" />
+
+    <!-- Mood Buttons Container -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHeading"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:background="@drawable/rounded_sandal_background">
+
+
+    <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <Button
+                android:id="@+id/btnCurious"
+                android:text="🧠 Curious"
+                style="@style/MoodButtonStyle" />
+            <Button
+                android:id="@+id/btnProductive"
+                android:text="✅ Productive"
+                style="@style/MoodButtonStyle" />
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <Button
+                android:id="@+id/btnRomantic"
+                android:text="💖 Romantic"
+                style="@style/MoodButtonStyle" />
+            <Button
+                android:id="@+id/btnChill"
+                android:text="😌 Chill"
+                style="@style/MoodButtonStyle" />
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <Button
+                android:id="@+id/btnSad"
+                android:text="😔 Sad"
+                style="@style/MoodButtonStyle" />
+            <Button
+                android:id="@+id/btnEnergetic"
+                android:text="⚡ Energetic"
+                style="@style/MoodButtonStyle" />
+        </LinearLayout>
+
+        <!-- Row 4 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <Button
+                android:id="@+id/btnAdventurous"
+                android:text="🌑 Adventurous"
+                style="@style/MoodButtonStyle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Mixed One Button -->
+    <Button
+        android:id="@+id/btnMixed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mixed one"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:background="#FFFFCC"
+        android:layout_below="@id/buttonContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <!-- Microphone Image at Bottom -->
+
+
+    <TextView
+        android:id="@+id/tvSlogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/imgMic"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="141dp"
+        android:layout_marginBottom="-290dp"
+        android:gravity="center"
+        android:text=" Tune. Tap. Connect."
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgMic"
+        android:layout_width="wrap_content"
+        android:layout_height="325dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="-16dp"
+        android:alpha="1.99"
+        android:src="@drawable/miclogo" /> <!-- Increased from 0.2 to 0.85 for brightness -->
+    android:tint="#FFFFFF" /> <!-- Optional: Applies a white overlay tint to enhance brightness -->
+
+
+</RelativeLayout>

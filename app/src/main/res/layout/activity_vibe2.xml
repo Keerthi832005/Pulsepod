@@ -13,14 +13,7 @@
         android:scaleType="centerCrop"
         android:alpha="0.15" />
 
-    <!-- Top Right Logo -->
-
     <!-- ✅ Top Left Back Button -->
-
-
-    <!-- Button Section -->
-
-
     <ImageView
         android:id="@+id/topLogo"
         android:layout_width="23dp"
@@ -28,15 +21,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
-
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
         android:contentDescription="Back Button"
         android:src="@drawable/back" />
 
+    <!-- ✅ Button Section with darker yellow box -->
     <LinearLayout
         android:id="@+id/buttonContainer"
         android:layout_width="match_parent"
@@ -78,12 +67,12 @@
             android:text="🚀 Motivation" />
 
         <Button
-            android:id="@+id/btnMusic"
+            android:id="@+id/btnScience"
             style="@style/MoodButtonStyle"
             android:text="🔬 Science" />
     </LinearLayout>
 
-    <!-- Bottom Bar: Tune Tap Connect -->
+    <!-- ✅ Bottom Bar -->
     <LinearLayout
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"

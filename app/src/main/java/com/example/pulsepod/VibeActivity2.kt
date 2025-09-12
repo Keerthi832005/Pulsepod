@@ -17,6 +17,7 @@ class VibeActivity2 : AppCompatActivity() {
     lateinit var btnSelfHelp: Button
     lateinit var btnMusic: Button
     lateinit var btnPopCulture: Button
+    lateinit var btnScience: Button
 
 
     @SuppressLint("MissingInflatedId")
@@ -37,8 +38,8 @@ class VibeActivity2 : AppCompatActivity() {
         philoButton=findViewById(R.id.btnPhilo)
         btnFiction=findViewById(R.id.btnFiction)
         btnSelfHelp=findViewById(R.id.btnSelfHelp)
-        btnMusic=findViewById(R.id.btnMusic)
         btnPopCulture=findViewById(R.id.btnPopCulture)
+        btnScience=findViewById(R.id.btnScience)
 
         loveButton.setOnClickListener {
             val intent = Intent(this, ChillLove::class.java)
@@ -58,6 +59,14 @@ class VibeActivity2 : AppCompatActivity() {
         }
         btnPopCulture.setOnClickListener {
             val intent = Intent(this, Popculture::class.java)
+            startActivity(intent)
+        }
+        btnScience.setOnClickListener {
+            val intent = Intent(this, Science::class.java)
+            startActivity(intent)
+        }
+        btnSelfHelp.setOnClickListener {
+            val intent = Intent(this, selfhelp::class.java)
             startActivity(intent)
         }
 

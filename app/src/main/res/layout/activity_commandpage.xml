@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/commandPageLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#000000"
-    tools:context=".CommandsActivity">
+    tools:context=".Commandpage">
 
-    <!-- 🔹 Top AppBar with Back Button + Title -->
+    <!-- 🔹 Top AppBar -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -15,7 +16,6 @@
         android:paddingStart="12dp"
         android:paddingEnd="12dp">
 
-        <!-- Back Button -->
         <ImageButton
             android:id="@+id/backButton"
             android:layout_width="36dp"
@@ -23,10 +23,8 @@
             android:layout_centerVertical="true"
             android:background="@android:color/transparent"
             android:src="@drawable/backbutt"
-            android:contentDescription="Back"
-            />
+            android:contentDescription="Back" />
 
-        <!-- Title -->
         <TextView
             android:id="@+id/commandsTitle"
             android:layout_width="wrap_content"
@@ -38,12 +36,107 @@
             android:textColor="@android:color/white" />
     </RelativeLayout>
 
-    <!-- 🔹 RecyclerView for Commands -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/commandsRecyclerView"
+    <!-- 🔹 Static Commands -->
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="4dp"
-        android:scrollbars="vertical" />
+        android:padding="16dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cmdSad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😢 Sad"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/cmdHappy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😊 Happy"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/cmdRomantic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💖 Romantic"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/cmdEnthusiastic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔥 Enthusiastic"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/cmdCollapsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💔 I was very collapsed"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/cmdTired"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😴 Tired"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/cmdConfused"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🤔 Confused"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/cmdConfident"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😎 Confident"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/cmdAngry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😡 Angry"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/cmdThankful"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🙏 Thankful"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

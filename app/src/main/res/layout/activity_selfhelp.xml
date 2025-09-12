@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Chill &amp; Love"
+            android:text="Selfhelp Podcast"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 

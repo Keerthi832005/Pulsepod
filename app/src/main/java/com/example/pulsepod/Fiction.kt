@@ -98,7 +98,7 @@ class Fiction : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
-                else -> falsegit
+                else -> false
             }
         }
     }

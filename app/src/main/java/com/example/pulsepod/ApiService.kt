@@ -38,5 +38,8 @@ interface ApiService {
     fun getFictionPodcast(): Call<List<PodcastModel>>
     @GET("api/PopCulture.php")
     fun getPopCulturePodcast(): Call<List<PodcastModel>>
-
+    @GET("api/get_Science.php")
+    fun getSciencePodcast(): Call<List<PodcastModel>>
+    @GET("api/get_selfhelp.php")
+    fun getselfhelpPodcast(): Call<List<PodcastModel>>
 }

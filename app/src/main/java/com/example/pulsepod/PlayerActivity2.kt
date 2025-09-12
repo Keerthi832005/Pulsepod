@@ -76,16 +76,13 @@ class PlayerActivity2 : AppCompatActivity() {
         // 📌 SharedPreferences for saving command
         val sharedPref = getSharedPreferences("PodcastPrefs", Context.MODE_PRIVATE)
 
-        // Load previously saved command
-        val savedCommand = sharedPref.getString("savedCommand", "")
-        editTextCommand.setText(savedCommand)
-
         // Save button click
         btnSaveCommand.setOnClickListener {
             val commandText = editTextCommand.text.toString().trim()
             if (commandText.isNotEmpty()) {
                 sharedPref.edit().putString("savedCommand", commandText).apply()
-                Toast.makeText(this, "Command Saved ✅", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Command has been saved ✅", Toast.LENGTH_SHORT).show()
+                editTextCommand.text.clear() // 👈 clear text after saving
             } else {
                 Toast.makeText(this, "Please enter a command", Toast.LENGTH_SHORT).show()
             }
@@ -94,26 +91,26 @@ class PlayerActivity2 : AppCompatActivity() {
 
     private fun initializeExoPlayer(url: String) {
         exoPlayer = ExoPlayer.Builder(this).build()
-        val mediaItem = MediaItem.fromUri(url) // ✅ use audioUrl from intent
+        val mediaItem = MediaItem.fromUri(url)
         exoPlayer?.setMediaItem(mediaItem)
         exoPlayer?.prepare()
-        exoPlayer?.playWhenReady = true
+        exoPlayer?.play()
 
         isPrepared = true
         isPlaying = true
-        playPauseButton.setImageResource(R.drawable.pasue) // pause icon
+        playPauseButton.setImageResource(R.drawable.pasue) // ⏸ when playing
     }
 
     private fun startAudio() {
         exoPlayer?.play()
         isPlaying = true
-        playPauseButton.setImageResource(R.drawable.pasue)
+        playPauseButton.setImageResource(R.drawable.pasue) // ⏸
     }
 
     private fun pauseAudio() {
         exoPlayer?.pause()
         isPlaying = false
-        playPauseButton.setImageResource(R.drawable.ic_play)
+        playPauseButton.setImageResource(R.drawable.ic_play) // ▶️
     }
 
     override fun onDestroy() {
